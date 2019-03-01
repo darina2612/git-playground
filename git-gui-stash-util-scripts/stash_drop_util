@@ -1,0 +1,11 @@
+if [ $# -gt 1 ]
+then
+    exit
+fi
+
+if [ $# -eq 0 ]
+then
+    git stash drop stash@{0}
+else
+    git stash drop stash@{$1}
+fi
